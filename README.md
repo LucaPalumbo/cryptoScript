@@ -7,7 +7,10 @@ usefull script about crypto attack
 ```py
 def integer_root(x, n): return ZZ(x).nth_root(n, truncate_mode=1)[0]
 ```
-
+### Root modulo n
+```py
+x = mod(a, n).nth_root(e)
+```
 
 ### Right-Padding `m` with zero `\x00`
 This basically means to multyply by 2, so you can use modular arithmetic product property to recover `c` generated from only `m`
