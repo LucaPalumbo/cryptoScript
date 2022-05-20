@@ -18,3 +18,7 @@ def integer_root(x, n): return ZZ(x).nth_root(n, truncate_mode=1)[0]
 ```py
 x = mod(a, n).nth_root(e)
 ```
+## next prime
+```py
+(46).next_prime()
+```
