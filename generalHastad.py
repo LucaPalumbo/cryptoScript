@@ -1,3 +1,4 @@
+# copied, dont know where
 def general_hastad(ciphertexts, moduli, pad_array, const_array=(), e=3, eps=1/8):
     if not(len(ciphertexts) == len(moduli) == len(pad_array) == len(const_array) == e):
         raise RuntimeError("Moduli and ciphertext arrays have to be equal in length, and contain at least as many elements as e")
