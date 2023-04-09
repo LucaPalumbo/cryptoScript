@@ -18,6 +18,16 @@ x = mod(a, n).nth_root(e)
 ```py
 def integer_root(x, n): return ZZ(x).nth_root(n, truncate_mode=1)[0]
 ```
+## Solving modular systems of equation
+```py
+# 6x + 3y = 1 (mod 17)
+# 3x + 8y = 2 (mod 17)
+A = matrix(GF(17), [[6,3], [3,8]])
+b = matrix(GF(17), [1, 2]).transpose()
+print( A.solve_right(b) )
+print( (6*14+3*12) % 17 == 1 )
+print( (3*14+8*12) % 17 == 2 )
+```
 
 ## next prime
 ```py
