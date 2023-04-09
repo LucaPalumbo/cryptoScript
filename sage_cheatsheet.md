@@ -19,6 +19,7 @@ x = mod(a, n).nth_root(e)
 def integer_root(x, n): return ZZ(x).nth_root(n, truncate_mode=1)[0]
 ```
 ## Solving modular systems of equation
+over Z/pZ
 ```py
 # 6x + 3y = 1 (mod 17)
 # 3x + 8y = 2 (mod 17)
@@ -27,6 +28,12 @@ b = matrix(GF(17), [1, 2]).transpose()
 print( A.solve_right(b) )
 print( (6*14+3*12) % 17 == 1 )
 print( (3*14+8*12) % 17 == 2 )
+```
+over Z
+```py
+A = matrix(ZZ, [[6,3], [3,8]])
+b = matrix(ZZ, [1,2]).transpose()
+A.change_ring(GF(q)).solve_right(b.change_ring(GF(q)))
 ```
 
 ## next prime
