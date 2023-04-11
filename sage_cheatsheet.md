@@ -40,7 +40,7 @@ A.change_ring(GF(q)).solve_right(b.change_ring(GF(q)))
 ```py
 x = PolynomialRing(RationalField(),'x').gen()
 f = x^6 - 2*x^5 + 3*x^4 - 3*x^3 + 3*x^2 - 2*x +1 - n
-x = f.roots()[0][0]
+sol = f.roots()[0][0]
 ```
 
 ## next prime
